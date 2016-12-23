@@ -1,0 +1,46 @@
+
+<!-- 话题页面 -->
+<ion-view cache-view="false">
+    <ion-nav-bar>
+
+    </ion-nav-bar>
+
+    <div class="bar bar-header bar-dark">  
+        <h1 class="title">网易新闻</h1>
+    </div>
+    <!-- 头部正标题 -->
+    <div class="bar bar-subheader">
+        <ion-scroll ng-controller="navController" direction="x">
+        <div ng-repeat="button in mine.topicTitle" ng-click="mine.topicChangePath(button)" class="button button-light">{{button}}</div>
+        </ion-scroll>
+    </div>
+    <!-- 副标题 -->
+
+
+
+    <ion-content style="position: relative;top:72px;">
+        <div class="list card" ng-repeat="news in mine.newList | orderBy:news.createTime" ng-click="mine.goToDetail(122121)">
+            <div class="item item-avatar">
+                <!--<p>传入的参数是{{news.expertId}}</p>-->
+                <img src="{{news.headpicurl}}" alt="">
+                <h2>{{news.name}}/{{news.title}}</h2>
+                <!--<p>{{}}</p>-->
+            </div>
+
+            <div class="item item-body">
+                <img src="{{news.picurl}}" alt="" class="full-image">
+                <p>
+                    {{news.alias}}
+                </p>
+
+                <p>
+                    <a href="#" class="subdued"> {{news.classification}} &nbsp|</a>
+                    <a href="#" class="subdued"> {{news.concernCount}}关注 &nbsp|</a>
+                    <a href="#" class="subdued">{{news.questionCount}}提问</a>
+                    <button href="#" style="width:60px;height:30px; border-radius:20px; background-color: rgba(136,101,237,0.2)">+关注</button>
+                </p>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

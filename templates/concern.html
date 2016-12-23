@@ -1,0 +1,40 @@
+<!-- 百科——图片轮播 -->
+<ion-view>
+    <ion-content>
+        <div class="brother"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="photos/girl.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="photos/赵丽颖.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="photos/杨幂.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="photos/王子文.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="photos/王凯.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-black"></div>
+        </div>
+            <div ng-repeat="num in mine.introduce" id="{{'div' + $index}}" class="myContent">
+                {{ $index }}
+                {{num}}
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<!-- 网易主页面 -->
+<ion-view cache-view="false">
+    <ion-nav-bar>
+        <ion-scroll direction="x" class="bar bar-subheader" ng-controller="navController">
+                <div class="button" ng-repeat="button in mine.titleData" ng-click="mine.changePath(button)" id="changePath">{{button}}</div>
+        </ion-scroll>
+    </ion-nav-bar>
+
+
+    <div class="bar bar-header bar-royal">
+        <h1 class="title">网易新闻</h1>
+    </div>
+
+    <ion-content>
+
+        <ion-refresher pulling-text="下拉刷新" pulling-icon="ion-arrow-down-c" on-refresh="mine.doRefresh()" refreshing-text="刷新完成">
+        </ion-refresher>
+
+        <ul class="belly">
+            <li ng-repeat="news in mine.newList | orderBy:news.priority" ng-click="mine.goToDetail(news.postid)" >
+                <img class="left" ng-src="{{news.imgsrc}}">
+                <div class="right">
+                   {{news.title}}
+                </div>
+            </li>
+        </ul>
+
+        <ion-infinite-scroll ng-if="mine.firstLoad" distance="1%" on-infinite="mine.loadMore()" class="icon ion-aperture">
+
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>
+
+
+
+
+<!--<button ng-click="mine.goToDetail()">详情</button>-->
+<!--<button ng-click="emitSome()">向上传播</button>-->

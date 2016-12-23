@@ -1,0 +1,28 @@
+
+<!-- 话题--话题 -->
+<ion-view>
+
+    <ion-content>
+        <div ng-repeat="news in mine.newList">
+            <p>{{news.name}}</p>
+            <p>
+
+            <img ng-src="{{news.userHeadOne}}" alt="">
+                <span>{{news.talkContentOne}}</span>
+            </p>
+            <p>
+
+                <img ng-src="{{news.userHeadTwo}}" alt="">
+                <span>
+                    <h1>谈话内容 {{news.talkContentTwo}}</h1>
+                </span>
+            </p>
+            <p>
+                <a href="#" class="subdued"> {{news.classification}} &nbsp|</a>
+                <a href="#" class="subdued"> {{news.concernCount}}关注 &nbsp|</a>
+                <a href="#" class="subdued">{{news.questionCount}}提问</a>
+                <button href="#" style="width:60px;height:30px; border-radius:20px; background-color:rgba(136,101,237,0.2)">+关注</button>
+            </p>
+        </div>
+    </ion-content>
+</ion-view>

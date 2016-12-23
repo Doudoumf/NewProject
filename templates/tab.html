@@ -1,0 +1,32 @@
+
+<!-- 网易、话题、我的切换 -->
+<ion-view cache-view="false">
+    <ion-tabs>
+
+        <ion-tab title="网易" href="#/tab/headLine">
+
+            <ion-nav-view name="tab-news"></ion-nav-view>
+
+        </ion-tab>
+
+
+        <!--href:改变的是路由-->
+        <!--name:改变的是状态-->
+        <ion-tab title="话题" href="#/tab/question">
+
+            <ion-nav-view name="tab-topic">话题</ion-nav-view>
+
+        </ion-tab>
+
+
+
+        <ion-tab title="我的" href="#/tab/mine">
+
+            <ion-nav-view name="tab-mine"></ion-nav-view>
+
+        </ion-tab>
+
+
+
+    </ion-tabs>
+</ion-view>

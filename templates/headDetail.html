@@ -1,0 +1,18 @@
+<!-- 网页详情页 -->
+<ion-view cache-view="false">
+    <ion-content>
+
+        <div class="head2">
+            <p>{{mine.title}}</p>
+            <p class="source">
+                <span>{{mine.source}}</span>
+                <span>{{mine.time}}</span>
+            </p>
+        </div>
+
+        <div ng-bind-html="mine.content" class="content2">
+            {{mine.content}}
+        </div>
+
+    </ion-content>
+</ion-view>
